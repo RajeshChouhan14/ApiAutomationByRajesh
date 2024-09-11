@@ -1,0 +1,30 @@
+{
+  "name": "apiautomationbyrajesh",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "wdio run wdio.conf.js",
+    "wdio": "wdio run ./wdio.conf.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@wdio/allure-reporter": "^9.0.8",
+    "@wdio/cli": "^9.0.9",
+    "@wdio/cucumber-framework": "^9.0.8",
+    "@wdio/local-runner": "^9.0.9",
+    "@wdio/mocha-framework": "^9.0.8",
+    "@wdio/spec-reporter": "^9.0.8",
+    "allure-commandline": "^2.30.0",
+    "axios": "^1.7.7",
+    "chai": "^5.1.1",
+    "mocha": "^10.7.3",
+    "webdriverio": "^9.0.9"
+  },
+  "dependencies": {
+    "node": "^22.8.0",
+    "wdio-spec-reporter": "^0.1.5"
+  }
+}
