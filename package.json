@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "node": "^22.8.0",
+    "puppeteer": "^23.3.0",
     "wdio-spec-reporter": "^0.1.5"
   }
 }

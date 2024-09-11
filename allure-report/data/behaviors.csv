@@ -1,6 +1,6 @@
 "BROKEN","EPIC","FAILED","FEATURE","PASSED","SKIPPED","STORY","UNKNOWN"
-"0","","0","Books API - GET /Books","1","0","GET /Books","0"
-"0","","0","Books API","1","0","GET /Books","0"
 "0","","0","Books API - GET /Books/{id}","2","0","GET /Books/{id}","0"
 "0","","0","Books API","2","0","GET /Books/{id}","0"
 "0","","0","Books API Tests","1","0","","0"
+"0","","0","Books API - GET /Books","1","0","GET /Books","0"
+"0","","0","Books API","1","0","GET /Books","0"

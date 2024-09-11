@@ -1,5 +1,5 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","1411","should retrieve a list of all books","","Wed Sep 11 09:18:19 IST 2024","passed","Wed Sep 11 09:18:20 IST 2024","","Books API - GET /Books","",""
-"","221","should return a 404 for a non-existent book ID","","Wed Sep 11 09:18:20 IST 2024","passed","Wed Sep 11 09:18:21 IST 2024","","Books API - GET /Books/{id}","",""
-"","186","should retrieve details of a specific book by its ID","","Wed Sep 11 09:18:20 IST 2024","passed","Wed Sep 11 09:18:20 IST 2024","","Books API - GET /Books/{id}","",""
+"","209","should return a 404 for a non-existent book ID","","Wed Sep 11 14:49:53 IST 2024","passed","Wed Sep 11 14:49:53 IST 2024","","Books API - GET /Books/{id}","",""
+"","161","should retrieve details of a specific book by its ID","","Wed Sep 11 14:49:53 IST 2024","passed","Wed Sep 11 14:49:53 IST 2024","","Books API - GET /Books/{id}","",""
 "","1230","should get all books","","Wed Sep 11 08:22:15 IST 2024","passed","Wed Sep 11 08:22:16 IST 2024","","Books API Tests","",""
+"","1635","should retrieve a list of all books","","Wed Sep 11 14:49:51 IST 2024","passed","Wed Sep 11 14:49:53 IST 2024","","Books API - GET /Books","",""
