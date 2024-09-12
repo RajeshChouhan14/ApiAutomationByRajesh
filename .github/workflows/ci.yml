@@ -19,7 +19,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "18"
+          node-version: "22"
 
       - name: Install dependencies
         run: npm install
@@ -41,5 +41,4 @@ jobs:
         with:
           name: allure-report
           path: allure-report
-        options:
-         args: ['--headless', '--no-sandbox', '--disable-dev-shm-usage', '--disable-gpu', '--window-size=1920,1080']
+    
