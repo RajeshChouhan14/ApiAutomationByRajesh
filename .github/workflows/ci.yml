@@ -1,4 +1,4 @@
-name: API_CI
+name: CI
 
 on:
   push:
@@ -14,34 +14,15 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "22"
+          node-version: "18"
 
       - name: Install dependencies
         run: npm install
-
-      - name: Install Chrome
-        run: |
-          wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-          sudo apt install -y ./google-chrome-stable_current_amd64.deb
-
-      - name: Install ChromeDriver
-        run: |
-          CHROMEDRIVER_VERSION=$(curl -sS https://chromedriver.storage.googleapis.com/LATEST_RELEASE)
-          wget https://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip
-          unzip chromedriver_linux64.zip
-          sudo mv chromedriver /usr/local/bin/
-          sudo chmod +x /usr/local/bin/chromedriver
-      #- name: Install Chrome
-      # uses: browser-actions/setup-chrome@v1
-
-      - name: Convert Allure HTML to PDF
-        run: |
-          google-chrome --headless --no-sandbox --disable-gpu --print-to-pdf=allure-report/allure-report.pdf file://$(pwd)/allure-report/index.html
 
       - name: Run tests
         run: npx wdio
@@ -52,14 +33,11 @@ jobs:
           allure generate allure-results --clean -o allure-report
         continue-on-error: true
 
+      - name: List files in allure-report directory
+        run: ls -l allure-report
+
       - name: Upload Allure Report
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v3
         with:
           name: allure-report
           path: allure-report
-
-      - name: Upload PDF Report
-        uses: actions/upload-artifact@v3
-        with:
-          name: allure-report-pdf
-          path: allure-report/allure-report.pdf

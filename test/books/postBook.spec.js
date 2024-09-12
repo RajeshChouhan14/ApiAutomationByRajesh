@@ -1,3 +1,6 @@
+const { expect } = require("chai");
+const { apiClient } = require("./utils");
+const allure = require("@wdio/allure-reporter").default;
 describe("Books API - POST /Books", () => {
   it("should add a new book to the system", async () => {
     allure.addFeature("Books API");

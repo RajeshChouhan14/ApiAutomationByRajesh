@@ -1,3 +1,7 @@
+const { expect } = require("chai");
+const { apiClient } = require("./utils");
+const axiosInstance = require("../../utils/axios-instance");
+const allure = require("@wdio/allure-reporter").default;
 describe("Authors API - POST /Authors", () => {
   it("should add a new author to the system", async () => {
     allure.addFeature("Authors API");

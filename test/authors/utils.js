@@ -1,27 +1,13 @@
-// test/pages/books.page.js
-const axiosInstance = require("../../utils/axios-instance");
+const axios = require("axios");
+const { baseUrl } = require("../config/config");
 
-class BooksPage {
-  get booksApiEndpoint() {
-    return "/api/v1/Books";
-  }
+const apiClient = axios.create({
+  baseURL: baseUrl,
+  headers: {
+    "Content-Type": "application/json",
+  },
+});
 
-  async getAllBooks() {
-    const response = await axiosInstance.get(this.booksApiEndpoint);
-    return response;
-  }
-
-  async getBookById(id) {
-    const response = await axiosInstance.get(`${this.booksApiEndpoint}/${id}`);
-    return response;
-  }
-
-  async createBook(bookData) {
-    const response = await axiosInstance.post(this.booksApiEndpoint, bookData);
-    return response;
-  }
-
-  // Other methods like updateBook, deleteBook...
-}
-
-module.exports = new BooksPage();
+module.exports = {
+  apiClient,
+};

@@ -1,3 +1,6 @@
+const { expect } = require("chai");
+const { apiClient } = require("./utils");
+const allure = require("@wdio/allure-reporter").default;
 describe("Books API - PUT /Books/{id}", () => {
   it("should update an existing book by its ID", async () => {
     allure.addFeature("Books API");

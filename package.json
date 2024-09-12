@@ -4,6 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "getbooks": "npx wdio wdio.conf.js --suite getbook",
+    "postbooks": "npx wdio wdio.conf.js --suite postbook",
+    "putbook": "npx wdio wdio.conf.js --suite putbook",
+    "deletebook": "npx wdio wdio.conf.js --suite deletebook",
+
+    "getauthor": "npx wdio wdio.conf.js --suite getauthor",
+    "postauthor": "npx wdio wdio.conf.js --suite postauthor",
+    "putauthor": "npx wdio wdio.conf.js --suite putauthor",
+    "deleteauthor": "npx wdio wdio.conf.js --suite deleteauthor",
+    "report": "allure generate allure-results --clean",
+    "openReport": "allure open",
+
+    "book": "npm run getbooks && npm run postbooks && npm run putbook && npm run deletebook && npm run getauthor && npm run postauthor && npm run putauthor && npm run deleteauthor && npm run report",
     "test": "wdio run wdio.conf.js",
     "wdio": "wdio run ./wdio.conf.js"
   },

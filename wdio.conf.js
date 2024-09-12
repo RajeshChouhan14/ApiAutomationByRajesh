@@ -21,7 +21,7 @@ exports.config = {
   // of the config file unless it's absolute.
   //
   specs: [
-    "./test/**/getbooks.spec.js",
+    "./test/**/*.spec.js",
 
     // ToDo: define location for spec files here
   ],
@@ -30,6 +30,17 @@ exports.config = {
   exclude: [
     // 'path/to/excluded/files'
   ],
+  suites: {
+    getbook: ["./test/books/getBook.spec.js"],
+    postbook: ["./test/books/postBook.spec.js"],
+    putbook: ["./test/books/putBook.spec.js"],
+    deletebook: ["./test/books/deleteBook.spec.js"],
+
+    getauthor: ["./test/authors/getAuthors.spec.js"],
+    postauthor: ["./test/authors/postAuthor.spec.js"],
+    putauthor: ["./test/authors/putAuthor.spec.js"],
+    deleteauthor: ["./test/authors/deleteAuthor.spec.js"],
+  },
   //
   // ============
   // Capabilities

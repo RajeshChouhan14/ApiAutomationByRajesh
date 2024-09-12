@@ -1,10 +1,16 @@
+const { expect } = require("chai");
+const { apiClient } = require("./utils");
+const axiosInstance = require("../../utils/axios-instance");
+const allure = require("@wdio/allure-reporter").default;
 describe("Authors API - GET /Authors", () => {
   it("should retrieve a list of all authors", async () => {
     allure.addFeature("Authors API");
     allure.addStory("GET /Authors");
     allure.addSeverity("critical");
-
     const response = await apiClient.get("/Authors");
+
+    // before(async () => {
+    // });
     expect(response.status).to.equal(200);
     expect(response.data).to.be.an("array");
   });

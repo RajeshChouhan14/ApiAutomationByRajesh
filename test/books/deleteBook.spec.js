@@ -1,3 +1,6 @@
+const { expect } = require("chai");
+const { apiClient } = require("./utils");
+const allure = require("@wdio/allure-reporter").default;
 describe("Books API - DELETE /Books/{id}", () => {
   it("should delete a book by its ID", async () => {
     allure.addFeature("Books API");
