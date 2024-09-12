@@ -16,7 +16,7 @@
     "report": "allure generate allure-results --clean",
     "openReport": "allure open",
 
-    "book": "npm run getbooks && npm run postbooks && npm run putbook && npm run deletebook && npm run getauthor && npm run postauthor && npm run putauthor && npm run deleteauthor && npm run report",
+    "book": "npm run getbooks && npm run postbooks && npm run putbook && npm run deletebook && npm run getauthor && npm run postauthor && npm run putauthor && npm run deleteauthor",
     "test": "wdio run wdio.conf.js",
     "wdio": "wdio run ./wdio.conf.js"
   },
