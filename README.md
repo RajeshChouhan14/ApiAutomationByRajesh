@@ -65,19 +65,19 @@ Git (for version control)
 
    1. Clone the repository:
    
-   git clone [https://github.com/RajeshChouhan14/ApiAutomationByRajesh.git]
+      git clone [https://github.com/RajeshChouhan14/ApiAutomationByRajesh.git]
    
-   cd ApiAutomationByRajesh
+      cd ApiAutomationByRajesh
 
    3. Install Dependencies
    
-   cmd:   npm install
+      cmd:  npm install
 
-   4.Running Tests
+   4. Running Tests
     
-    To execute all the test cases together, use the following command:(you can refer package.json(scripts) & wdio.confg.json(suites) for more modification)
+      To execute all the test cases together, use the following command:(you can refer package.json(scripts) & wdio.confg.json(suites) for more modification)
     
-    cmd:  npm run book
+      cmd:  npm run book
     
    5.Generating Reports
     
