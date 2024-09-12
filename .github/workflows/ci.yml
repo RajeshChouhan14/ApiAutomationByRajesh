@@ -25,7 +25,7 @@ jobs:
         run: npm install
 
       - name: Run tests
-        run: npx wdio
+        run: npm run book
 
       - name: Generate Allure Report
         run: |
