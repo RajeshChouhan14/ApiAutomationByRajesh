@@ -50,7 +50,7 @@ jobs:
           server_port: 465
           subject: "Test Report: Bookstore API Automation CI"
           body: "The latest test results are attached."
-          to: "er.rajeshchouhan14@gmail.com"
+          to: "fiyitol566@janfab.com"
           from: "api@github.com"
           attachments: allure-report/index.html
         if: always()  # Always run this step even if the previous steps fail  
