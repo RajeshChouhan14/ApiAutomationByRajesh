@@ -7,7 +7,8 @@ on:
   pull_request:
     branches:
       - main
-
+  schedule:
+    - cron: "30 7 * * *" # runs at 12:30pm IST everyday
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -41,4 +42,16 @@ jobs:
         with:
           name: allure-report
           path: allure-report
+
+      - name: Send Email Report
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          subject: "Test Report: Bookstore API Automation CI"
+          body: "The latest test results are attached."
+          to: "er.rajeshchouhan14@gmail.com"
+          from: "api@github.com"
+          attachments: allure-report/index.html
+        if: always()  # Always run this step even if the previous steps fail  
     
