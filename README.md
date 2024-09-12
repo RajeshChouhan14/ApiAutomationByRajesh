@@ -4,6 +4,8 @@ Introduction
 This project is an API automation framework using JavaScript, WebdriverIO, and Axios, designed to test the APIs provided by FakeRestAPI. The framework is structured to be modular, maintainable, and scalable, making it easier to test various API endpoints related to authors and books.
 
 ## Folder Structure
+![image](https://github.com/user-attachments/assets/2a351ef3-c235-4238-9285-65983d8a5f1e)
+
 APIAutomationByRajesh/
 ├── .github/
 │   └── workflows/
@@ -47,18 +49,23 @@ Git (for version control)
    1. Clone the repository:
    git clone [https://github.com/RajeshChouhan14/ApiAutomationByRajesh.git]
    cd ApiAutomationByRajesh
-   2. Install Dependencies
+
+   3. Install Dependencies
    npm install
-   3.Running Tests
+
+   4.Running Tests
     To execute all the test cases together, use the following command:(you can refer package.json(scripts) & wdio.confg.json(suites) for more modification)
-    npm run book
-   4.Generating Reports
+    cmd:  npm run book
+    
+   5.Generating Reports
      After running the tests, you can generate an Allure report using the following commands:(report attached in email)
      Create allure report: npm run report
-     Open report: allure open
-   5.Continuous Integration
+     Open report cmd: allure open
+     
+   6.Continuous Integration
      The project includes a CI/CD pipeline configured using GitHub Actions, which automatically runs the test suite on every push or pull request. The workflow configuration is located at .github/workflows/ci.yml.
-   6.Contributing
+  
+   7.Contributing
       Contributions are welcome! To contribute:
       
       Fork the repository.
