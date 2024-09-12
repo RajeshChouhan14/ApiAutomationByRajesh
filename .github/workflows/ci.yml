@@ -41,17 +41,5 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: allure-report
-          path: allure-report
-
-      - name: Send Email Report
-        uses: dawidd6/action-send-mail@v3
-        with:
-          server_address: smtp.freesmtpservers.com
-          server_port: 465
-          subject: "Test Report: Bookstore API Automation CI"
-          body: "The latest test results are attached."
-          to: "fiyitol566@janfab.com"
-          from: "api@github.com"
-          attachments: allure-report/index.html
-        if: always()  # Always run this step even if the previous steps fail  
+          path: allure-report 
     
