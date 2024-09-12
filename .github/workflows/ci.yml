@@ -46,7 +46,7 @@ jobs:
       - name: Send Email Report
         uses: dawidd6/action-send-mail@v3
         with:
-          server_address: smtp.gmail.com
+          server_address: smtp.freesmtpservers.com
           server_port: 465
           subject: "Test Report: Bookstore API Automation CI"
           body: "The latest test results are attached."
