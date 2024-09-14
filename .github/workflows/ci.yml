@@ -7,8 +7,8 @@ on:
   pull_request:
     branches:
       - main
-  schedule:
-    - cron: "30 7 * * *" # runs at 12:30pm IST everyday
+ # schedule:
+   # - cron: "30 7 * * *" # runs at 12:30pm IST everyday
 jobs:
   build:
     runs-on: ubuntu-latest
